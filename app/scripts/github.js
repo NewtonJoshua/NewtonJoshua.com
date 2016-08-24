@@ -14,7 +14,7 @@ function gitHubFeeds() {
                     ' <small class="pull-right text-muted">' + formatDate(feed.publishedDate) + '</small>' +
                     ' <h5><a href="' + feed.link + '"  target="_blank">' + feed.title + '</a></h5>' +
                     '</div>' +
-                    feed.content +
+                    formatGitContent(feed.content) +
                     '</div>' +
                     '</li>'
 
@@ -25,3 +25,17 @@ function gitHubFeeds() {
     });
 }
 google.setOnLoadCallback(gitHubFeeds);
+
+function formatGitContent(content) {
+    if (content.includes("<code>")) {
+        var res = content.split("<code>");
+        var res1 = res[1].split("</code>");
+        var commit  = res1[0].replace("href=\"", "target='_blank' href=\"https://github.com");
+        res = content.split("<blockquote>");
+        res1 = res[1].split("</blockquote>");
+        var description = res1[0];
+        return ("<blockquote>" + description + "<footer>" + commit  + "</footer></blockquote>");
+    } else {
+        return '';
+    }
+}
