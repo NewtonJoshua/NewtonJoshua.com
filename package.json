@@ -1,0 +1,23 @@
+{
+    "name": "NewtonJoshua",
+    "version": "0.1.0",
+    "description": "Website of Newton Joshua",
+    "repository": "https://github.com/NewtonJoshua/NewtonJoshua.com",
+    "author": "Newton Joshua",
+    "contributors": [
+        {
+            "name": "Angelin Newton",
+            "email": "angelin@newtonjoshua.com"
+    }
+  ],
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "dependencies": {
+        "firebase": "^3.3.0"
+    },
+    "devDependencies": {
+        "body-parser": "^1.15.2",
+        "mocha": "^3.0.2",
+        "nodemon": "^1.10.2",
+        "supertest": "^2.0.0"
+    }
+}
