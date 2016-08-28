@@ -1,8 +1,24 @@
-google.load("feeds", "1");
+'use strict';
+
+google.load('feeds', '1');
+
+function formatGitContent(content) {
+    if (content.includes('<code>')) {
+        var res = content.split('<code>');
+        var res1 = res[1].split('</code>');
+        var commit  = res1[0].replace('href="', 'target="_blank" href="https://github.com');
+        res = content.split('<blockquote>');
+        res1 = res[1].split('</blockquote>');
+        var description = res1[0];
+        return ('<blockquote>' + description + '<footer>' + commit  + '</footer></blockquote>');
+    } else {
+        return '';
+    }
+}
 
 function gitHubFeeds() {
-    var feed = new google.feeds.Feed("https://github.com/NewtonJoshua.atom");
-    feed.setNumEntries(20);
+    var feed = new google.feeds.Feed('https://github.com/NewtonJoshua.atom');
+    feed.setNumEntries(40);
     feed.load(function (result) {
         if (!result.error) {
             result.feed.entries.forEach(function (feed) {
@@ -16,26 +32,12 @@ function gitHubFeeds() {
                     '</div>' +
                     formatGitContent(feed.content) +
                     '</div>' +
-                    '</li>'
+                    '</li>';
 
-                $(fbFeed).append(elem);
-
+                $(gitFeed).append(elem);
             });
         }
     });
 }
-google.setOnLoadCallback(gitHubFeeds);
 
-function formatGitContent(content) {
-    if (content.includes("<code>")) {
-        var res = content.split("<code>");
-        var res1 = res[1].split("</code>");
-        var commit  = res1[0].replace("href=\"", "target='_blank' href=\"https://github.com");
-        res = content.split("<blockquote>");
-        res1 = res[1].split("</blockquote>");
-        var description = res1[0];
-        return ("<blockquote>" + description + "<footer>" + commit  + "</footer></blockquote>");
-    } else {
-        return '';
-    }
-}
+google.setOnLoadCallback(gitHubFeeds);

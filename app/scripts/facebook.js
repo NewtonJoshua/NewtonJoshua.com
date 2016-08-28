@@ -1,3 +1,5 @@
+'use strict';
+
 var feeds = [];
 var picUrl = '';
 window.fbAsyncInit = function () {
@@ -10,20 +12,20 @@ window.fbAsyncInit = function () {
     FB.api(
         '/me',
         'GET', {
-            "fields": "picture{url},cover,feed{permalink_url,created_time,link,picture,full_picture,message,story,from,likes{name},comments{from,message}}",
+            fields: 'picture{url},cover,feed{permalink_url,created_time,link,picture,full_picture,message,story,from,likes{name},comments{from,message}}',
             access_token: accessToken
         },
         function (response) {
             if (response.picture.data.url) {
                 console.log('updated');
-                document.getElementById("myPicture").src = response.picture.data.url;
+                document.getElementById('myPicture').src = response.picture.data.url;
                 picUrl = response.picture.data.url;
             } else {
                 picUrl = 'images/picture.jpg';
             }
             if (response.cover.source) {
                 console.log('updated');
-                document.getElementById("cover").style.backgroundImage = "url(" + response.cover.source + ")";
+                document.getElementById('cover').style.backgroundImage = 'url(' + response.cover.source + ')';
             }
             if (response.feed.data) {
                 response.feed.data.forEach(function (feed) {
@@ -40,15 +42,16 @@ window.fbAsyncInit = function () {
                             '<div class="media-body-inline-grid" data-grid="images">' +
                             (feed.full_picture ? '<img data-width="640" data-height="640" data-action="zoom" src=' + feed.full_picture + '>' : '') +
                             '</div>' +
-                            (feed.likes ? ('<button type="button" class="btn btn-xs btn-pill btn-primary"><span class="icon icon-thumbs-up"></span>' + feed.likes.data.length + ' </button>') : '') +
-                            '</li>'
+                            (feed.likes ? ('<button type="button" class="btn btn-xs btn-pill btn-default"><img src="images/logos/ThumbsUp%20Small.png" height="15px"> ' + feed.likes.data.length + ' </button>') : '') +
+                            '</li>';
 
                         $(fbFeed).append(elem);
-                        feeds.push(feed)
+                        feeds.push(feed);
                     }
                 });
-                document.getElementById("myStatus").innerHTML = feeds[0].story;
+                document.getElementById('myStatus').innerHTML = feeds[0].story;
             }
+
             if (response.error) {
                 console.log(response.error.message);
             }

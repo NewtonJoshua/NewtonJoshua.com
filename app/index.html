@@ -440,75 +440,54 @@
           </h5>
 
                         <p class="m-b-md" id="myStatus"></p>
-
-                        <ul class="panel-menu">
-                            <li class="panel-menu-item">
-                                <a href="#userModal" class="text-inherit" data-toggle="modal">
-                Friends
-                <h5 class="m-y-0">12M</h5>
-              </a>
-                            </li>
-
-                            <li class="panel-menu-item">
-                                <a href="#userModal" class="text-inherit" data-toggle="modal">
-                Enemies
-                <h5 class="m-y-0">1</h5>
-              </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
                 <div class="panel panel-default visible-md-block visible-lg-block">
                     <div class="panel-body">
-                        <h5 class="m-t-0">About <small>· <a href="#">Edit</a></small></h5>
+                        <h5 class="m-t-0">About</h5>
                         <ul class="list-unstyled list-spaced">
-                            <li><span class="text-muted icon icon-calendar m-r"></span>Went to <a href="#">Oh, Canada</a>
-                                <li><span class="text-muted icon icon-users m-r"></span>Became friends with <a href="#">Obama</a>
-                                    <li><span class="text-muted icon icon-github m-r"></span>Worked at <a href="#">Github</a>
-                                        <li><span class="text-muted icon icon-home m-r"></span>Lives in <a href="#">San Francisco, CA</a>
-                                            <li><span class="text-muted icon icon-location-pin m-r"></span>From <a href="#">Seattle, WA</a>
+                            <li><span class="text-muted icon icon-users m-r"></span>Married to
+                                <a href="https://www.facebook.com/angelin.newton" target="_blank">Angelin Elfieda</a></li>
+                            <li><span class="text-muted icon icon-home m-r"></span>Lives in
+                                <a href="https://en.wikipedia.org/wiki/Chennai" target="_blank">Chennai, India</a></li>
+                            <li><span class="text-muted icon icon-location-pin m-r"></span>From
+                                <a href="https://en.wikipedia.org/wiki/Nazareth,_Tamil_Nadu" target="_blank">Nazareth, TN, India</a></li>
+                            <li><span class="text-muted icon icon-mail m-r"></span>Mail at
+                                <a href="mailto:NeJo@NewtonJoshua.com" target="_blank">NeJo@NewtonJoshua.com</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="panel panel-default visible-md-block visible-lg-block">
-                    <div class="panel-body">
-                        <h5 class="m-t-0">Photos <small>· <a href="#">Edit</a></small></h5>
-                        <div data-grid="images" data-target-height="150">
-                            <div>
-                                <img data-width="640" data-height="640" data-action="zoom" src="bootstrap-theme/docs/assets/img/instagram_5.jpg">
-                            </div>
-
-                            <div>
-                                <img data-width="640" data-height="640" data-action="zoom" src="bootstrap-theme/docs/assets/img/instagram_6.jpg">
-                            </div>
-
-                            <div>
-                                <img data-width="640" data-height="640" data-action="zoom" src="bootstrap-theme/docs/assets/img/instagram_7.jpg">
-                            </div>
-
-                            <div>
-                                <img data-width="640" data-height="640" data-action="zoom" src="bootstrap-theme/docs/assets/img/instagram_8.jpg">
-                            </div>
-
-                            <div>
-                                <img data-width="640" data-height="640" data-action="zoom" src="bootstrap-theme/docs/assets/img/instagram_9.jpg">
-                            </div>
-
-                            <div>
-                                <img data-width="640" data-height="640" data-action="zoom" src="bootstrap-theme/docs/assets/img/instagram_10.jpg">
-                            </div>
-                        </div>
+                    <div class="panel-body" id="photoPanel">
+                        <h5 class="m-t-0">Analytics</h5>
+                        <div id="countryChart"></div>
+                        <div id="browserChart"></div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <ul class="list-group media-list media-list-stream" id="fbFeed">
-
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active" role="presentation">
+                        <a href="#fbFeed" data-toggle="tab" aria-controls="fbFeed" role="tab"><img src="images/logos/FB-f-Logo__blue_29.png"> <img src="images/logos/facebook-min.png" height="20px"></a>
+                    </li>
+                    <li>
+                        <a href="#gitFeed" data-toggle="tab" aria-controls="gitFeed" role="tab">
+                            <img src="images/logos/GitHub-Mark-32px.png" height="30px"> <img src="images/logos/GitHub_Logo.png" height="25px"></a>
+                    </li>
                 </ul>
+                <div class="tab-content">
+                    <ul class="list-group media-list media-list-stream tab-pane active" id="fbFeed" role="tabpanel">
+
+                    </ul>
+                    <ul class="list-group media-list media-list-stream tab-pane" id="gitFeed" role="tabpanel">
+
+                    </ul>
+                </div>
             </div>
+
             <div class="col-md-3">
                 <div class="alert alert-warning alert-dismissible hidden-xs" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -564,7 +543,7 @@
 
                 <div class="panel panel-default panel-link-list">
                     <div class="panel-body">
-                        © 2015 Bootstrap
+                        © 2016 NewtonJoshua.com
 
                         <a href="#">About</a>
                         <a href="#">Help</a>
@@ -606,6 +585,7 @@
     <script src="bootstrap-theme/docs/assets/js/toolkit.js"></script>
     <script src="bootstrap-theme/docs/assets/js/application.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
     <script>
@@ -634,6 +614,26 @@
     <script src="scripts/facebook.js"></script>
     <script src="scripts/github.js"></script>
     <script src="scripts/service.js"></script>
+    <script src="scripts/analytics.js"></script>
+
+    <!--// Google Analytics-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'lib/ga/analytics.js', 'ga');
+
+        ga('create', 'UA-64801232-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
 
     <!--    <script src="scripts/fb.js"></script>-->
 
