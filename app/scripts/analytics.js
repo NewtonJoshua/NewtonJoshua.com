@@ -58,7 +58,7 @@ function drawPieChart(data) {
         is3D: true,
         legend: {
             position: 'labeled',
-            maxLines: 3,
+            maxLines: 5,
             textStyle: {
                 color: 'navy',
                 fontSize: 12
@@ -169,7 +169,7 @@ function checkValidity() {
 
         })
         .fail(function (data) {
-            alert(data);
+            console.log(data);
             gaGetToken();
         });
 }

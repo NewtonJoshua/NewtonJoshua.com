@@ -1,3 +1,5 @@
 node_modules
 bootstrap-theme
-*.log
+lib
+firebase-debug.log
+.gitignore

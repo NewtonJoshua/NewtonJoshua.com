@@ -7,16 +7,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Website of Newton Joshua">
-    <meta name="keywords" content="Newton Joshua, Angelin Elfieda">
-    <meta name="author" content="">
+    <meta name="description" content="This is the website of Newton Joshua. View his personal and professional details.">
+    <meta name="keywords" content="Newton Joshua, Angelin Newton, Angelin Elfieda, AITAM, Action Item Tracker, Action Item Tracking And Management, Java Developer, HTML5 Developer">
+    <meta name="copyright" content="Copyright © 2016 Newton Joshua & Angelin Newton">
+    <meta name="author" content="Newton Joshua">
+    <meta name="designer" content="Newton Joshua">
+    <meta name="email" content="NeJo@NewtonJoshua.com">
 
     <title>
 
         Newton Joshua
 
     </title>
-
+    <script src="lib/pace/pace.min.js"></script>
+    <link href="lib/pace/pace-theme-fill-left.css" rel="stylesheet" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
     <link href="bootstrap-theme/docs/assets/css/toolkit.css" rel="stylesheet">
@@ -63,10 +67,7 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="profile/index.html">Profile</a>
-                    </li>
-                    <li>
-                        <a data-toggle="modal" href="#msgModal">Messages</a>
+                        <a href="profile.html">Profile</a>
                     </li>
                     <li>
                         <a href="docs/index.html">Docs</a>
@@ -75,28 +76,18 @@
 
                 <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
                     <li>
-                        <a class="app-notifications" href="notifications/index.html">
-                            <span class="icon icon-bell"></span>
-                        </a>
-                    </li>
-                    <li>
                         <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
-                            <img class="img-circle" src="bootstrap-theme/docs/assets/img/avatar-dhg.png">
+                            <img class="img-circle" src="images/picture.jpg" id="thumbPic">
                         </button>
                     </li>
                 </ul>
 
-                <form class="navbar-form navbar-right app-search" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" data-action="grow" placeholder="Search">
-                    </div>
-                </form>
+
 
                 <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="profile/index.html">Profile</a></li>
+                    <li><a href="profile.html">Profile</a></li>
                     <li><a href="notifications/index.html">Notifications</a></li>
-                    <li><a data-toggle="modal" href="#msgModal">Messages</a></li>
                     <li><a href="docs/index.html">Docs</a></li>
                     <li><a href="#" data-action="growl">Growl</a></li>
                     <li><a href="login/index.html">Logout</a></li>
@@ -110,259 +101,6 @@
         </div>
     </nav>
 
-    <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="msgModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <button type="button" class="btn btn-sm btn-primary pull-right app-new-msg js-newMsg">New message</button>
-                    <h4 class="modal-title">Messages</h4>
-                </div>
-
-                <div class="modal-body p-a-0 js-modalBody">
-                    <div class="modal-body-scroller">
-                        <div class="media-list media-list-users list-group js-msgGroup">
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-fat.jpg">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Jacob Thornton</strong> and <strong>1 other</strong>
-                                        <div class="media-body-secondary">
-                                            Aenean eu leo quam. Pellentesque ornare sem lacinia quam &hellip;
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-mdo.png">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Mark Otto</strong> and <strong>3 others</strong>
-                                        <div class="media-body-secondary">
-                                            Brunch sustainable placeat vegan bicycle rights yeah…
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-dhg.png">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Dave Gamache</strong>
-                                        <div class="media-body-secondary">
-                                            Brunch sustainable placeat vegan bicycle rights yeah…
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-fat.jpg">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Jacob Thornton</strong> and <strong>1 other</strong>
-                                        <div class="media-body-secondary">
-                                            Aenean eu leo quam. Pellentesque ornare sem lacinia quam &hellip;
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-mdo.png">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Mark Otto</strong> and <strong>3 others</strong>
-                                        <div class="media-body-secondary">
-                                            Brunch sustainable placeat vegan bicycle rights yeah…
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-dhg.png">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Dave Gamache</strong>
-                                        <div class="media-body-secondary">
-                                            Brunch sustainable placeat vegan bicycle rights yeah…
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-fat.jpg">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Jacob Thornton</strong> and <strong>1 other</strong>
-                                        <div class="media-body-secondary">
-                                            Aenean eu leo quam. Pellentesque ornare sem lacinia quam &hellip;
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-mdo.png">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Mark Otto</strong> and <strong>3 others</strong>
-                                        <div class="media-body-secondary">
-                                            Brunch sustainable placeat vegan bicycle rights yeah…
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="media">
-                                    <span class="media-left">
-                  <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-dhg.png">
-                </span>
-                                    <div class="media-body">
-                                        <strong>Dave Gamache</strong>
-                                        <div class="media-body-secondary">
-                                            Brunch sustainable placeat vegan bicycle rights yeah…
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="hide m-a js-conversation">
-                            <ul class="media-list media-list-conversation">
-                                <li class="media media-current-user m-b-md">
-                                    <div class="media-body">
-                                        <div class="media-body-text">
-                                            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
-                                        </div>
-                                        <div class="media-footer">
-                                            <small class="text-muted">
-                      <a href="#">Dave Gamache</a> at 4:20PM
-                    </small>
-                                        </div>
-                                    </div>
-                                    <a class="media-right" href="#">
-                                        <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-dhg.png">
-                                    </a>
-                                </li>
-
-                                <li class="media m-b-md">
-                                    <a class="media-left" href="#">
-                                        <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-fat.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="media-body-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                                        </div>
-                                        <div class="media-body-text">
-                                            Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                                        </div>
-                                        <div class="media-body-text">
-                                            Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-                                        </div>
-                                        <div class="media-footer">
-                                            <small class="text-muted">
-                      <a href="#">Fat</a> at 4:28PM
-                    </small>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="media m-b-md">
-                                    <a class="media-left" href="#">
-                                        <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-mdo.png">
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="media-body-text">
-                                            Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur.
-                                        </div>
-                                        <div class="media-body-text">
-                                            Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                        </div>
-                                        <div class="media-footer">
-                                            <small class="text-muted">
-                      <a href="#">Mark Otto</a> at 4:20PM
-                    </small>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="media media-current-user m-b-md">
-                                    <div class="media-body">
-                                        <div class="media-body-text">
-                                            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
-                                        </div>
-                                        <div class="media-footer">
-                                            <small class="text-muted">
-                      <a href="#">Dave Gamache</a> at 4:20PM
-                    </small>
-                                        </div>
-                                    </div>
-                                    <a class="media-right" href="#">
-                                        <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-dhg.png">
-                                    </a>
-                                </li>
-
-                                <li class="media m-b-md">
-                                    <a class="media-left" href="#">
-                                        <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-fat.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="media-body-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                                        </div>
-                                        <div class="media-body-text">
-                                            Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                                        </div>
-                                        <div class="media-body-text">
-                                            Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-                                        </div>
-                                        <div class="media-footer">
-                                            <small class="text-muted">
-                      <a href="#">Fat</a> at 4:28PM
-                    </small>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="media m-b">
-                                    <a class="media-left" href="#">
-                                        <img class="img-circle media-object" src="bootstrap-theme/docs/assets/img/avatar-mdo.png">
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="media-body-text">
-                                            Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur.
-                                        </div>
-                                        <div class="media-body-text">
-                                            Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                        </div>
-                                        <div class="media-footer">
-                                            <small class="text-muted">
-                      <a href="#">Mark Otto</a> at 4:20PM
-                    </small>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModal" aria-hidden="true">
         <div class="modal-dialog">
@@ -453,7 +191,7 @@
                                 <a href="https://en.wikipedia.org/wiki/Chennai" target="_blank">Chennai, India</a></li>
                             <li><span class="text-muted icon icon-location-pin m-r"></span>From
                                 <a href="https://en.wikipedia.org/wiki/Nazareth,_Tamil_Nadu" target="_blank">Nazareth, TN, India</a></li>
-                            <li><span class="text-muted icon icon-mail m-r"></span>Mail at
+                            <li><span class="text-muted icon icon-mail m-r"></span>Mail
                                 <a href="mailto:NeJo@NewtonJoshua.com" target="_blank">NeJo@NewtonJoshua.com</a></li>
                         </ul>
                     </div>
@@ -461,7 +199,8 @@
 
                 <div class="panel panel-default visible-md-block visible-lg-block">
                     <div class="panel-body" id="photoPanel">
-                        <h5 class="m-t-0">Analytics</h5>
+                        <h5 class="m-t-0"><img src="images/logos/Google_Analytics_logo.png" width="75%"></h5>
+                        <p style="color:navy;font-family: Times New Roman;font-size: 16;"><b>Country:</b></p>
                         <div id="countryChart"></div>
                         <div id="browserChart"></div>
                     </div>
@@ -489,55 +228,17 @@
             </div>
 
             <div class="col-md-3">
-                <div class="alert alert-warning alert-dismissible hidden-xs" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <a class="alert-link" href="profile/index.html">Visit your profile!</a> Check your self, you aren't looking too good.
-                </div>
 
-                <div class="panel panel-default m-b-md hidden-xs">
+                <div class="panel panel-default m-b-md hidden-xs" height="100%">
                     <div class="panel-body">
-                        <h5 class="m-t-0">Sponsored</h5>
-                        <div data-grid="images" data-target-height="150">
-                            <img class="media-object" data-width="640" data-height="640" data-action="zoom" src="bootstrap-theme/docs/assets/img/instagram_2.jpg">
-                        </div>
-                        <p><strong>It might be time to visit Iceland.</strong> Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice. What are you waiting for?</p>
-                        <button class="btn btn-primary-outline btn-sm">Buy a ticket</button>
-                    </div>
-                </div>
-
-                <div class="panel panel-default m-b-md hidden-xs">
-                    <div class="panel-body">
-                        <h5 class="m-t-0">Likes <small>· <a href="#">View All</a></small></h5>
-                        <ul class="media-list media-list-stream">
-                            <li class="media m-b">
-                                <a class="media-left" href="#">
-                                    <img class="media-object img-circle" src="bootstrap-theme/docs/assets/img/avatar-fat.jpg">
-                                </a>
-                                <div class="media-body">
-                                    <strong>Jacob Thornton</strong> @fat
-                                    <div class="media-body-actions">
-                                        <button class="btn btn-primary-outline btn-sm">
-                                            <span class="icon icon-add-user"></span> Follow</button>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <a class="media-left" href="#">
-                                    <img class="media-object img-circle" src="bootstrap-theme/docs/assets/img/avatar-mdo.png">
-                                </a>
-                                <div class="media-body">
-                                    <strong>Mark Otto</strong> @mdo
-                                    <div class="media-body-actions">
-                                        <button class="btn btn-primary-outline btn-sm">
-                                            <span class="icon icon-add-user"></span> Follow</button>
-                                        </button>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="panel-footer">
-                        Dave really likes these nerds, no one knows why though.
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- NewtonJoshua.com -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2064100791057746" data-ad-slot="5039256119" data-ad-format="auto"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        <br>
+                        <img src="images/logos/powered_by_google_on_white_hdpi.png" width="50%">
                     </div>
                 </div>
 
