@@ -18,7 +18,7 @@ function formatGitContent(content) {
 
 function gitHubFeeds() {
     var feed = new google.feeds.Feed('https://github.com/NewtonJoshua.atom');
-    feed.setNumEntries(40);
+    feed.setNumEntries(500);
     feed.load(function (result) {
         if (!result.error) {
             result.feed.entries.forEach(function (feed) {
