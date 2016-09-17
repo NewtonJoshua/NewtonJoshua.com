@@ -26,11 +26,12 @@ function isScrollBottom() {
 function loadMoreFeed() {
     loadMoreFBFeed();
     loadMoreGitFeed();
+    loadMoreStackFeed();
 }
 
 $(window).scroll(function () {
     if (isScrollBottom()) {
         loadMoreFeed();
-        console.log('scroll end');
+        console.debug('scroll end');
     }
 });

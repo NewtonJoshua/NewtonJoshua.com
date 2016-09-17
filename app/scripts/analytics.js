@@ -92,10 +92,10 @@ function gaGetCountry() {
                     var d = data.rows[i];
                     d[1] = Number(d[1]);
                 }
-                console.log(data.rows);
+                console.debug(data.rows);
                 drawRegionsMap(data.rows);
             } else {
-                console.log(status);
+                console.debug(status);
             }
 
         });
@@ -119,10 +119,10 @@ function gaGetBrowser() {
                     var d = data.rows[i];
                     d[1] = Number(d[1]);
                 }
-                console.log(data.rows);
+                console.debug(data.rows);
                 drawPieChart(data.rows);
             } else {
-                console.log(status);
+                console.debug(status);
             }
 
         });
@@ -136,12 +136,12 @@ function gaGetToken() {
         refresh_token: refreshToken
     }, function (data, status) {
         if (status === 'success') {
-            console.log('New Token');
+            console.debug('New Token');
             localStorage.access_token = data.access_token;
             gaGetCountry();
             gaGetBrowser();
         } else {
-            console.log(status);
+            console.debug(status);
         }
     });
 }
@@ -152,8 +152,8 @@ function checkValidity() {
             access_token: localStorage.access_token
         }).done(function (data, status) {
             if (status === 'success') {
-                console.log(data.expires_in);
-                console.log(data.hasOwnProperty('expires_in'));
+                console.debug(data.expires_in);
+                console.debug(data.hasOwnProperty('expires_in'));
                 var check = false;
                 check = data.hasOwnProperty('expires_in');
                 if (check) {
@@ -164,12 +164,12 @@ function checkValidity() {
                     gaGetToken();
                 }
             } else {
-                console.log(status);
+                console.debug(status);
             }
 
         })
         .fail(function (data) {
-            console.log(data);
+            console.debug(data);
             gaGetToken();
         });
 }
@@ -177,11 +177,11 @@ function checkValidity() {
 function gaReport() {
 
     if (localStorage.access_token === null) {
-        console.log('No token');
+        console.debug('No token');
         gaGetToken();
     }
     if (localStorage.access_token !== null) {
-        console.log(localStorage.access_token);
+        console.debug(localStorage.access_token);
         checkValidity();
     }
 
