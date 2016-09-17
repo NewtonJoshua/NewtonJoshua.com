@@ -33,7 +33,7 @@ window.fbAsyncInit = function () {
                 response.feed.data.forEach(function (feed) {
                     if (feed.story) {
                         var elem = formatFBFeed(feed);
-                        $(fbFeed).append(elem);
+                        $('#fbFeed').append(elem);
                         if (feed.from.id === response.id) {
                             feeds.push(feed);
                         }
@@ -58,7 +58,7 @@ function loadMoreFBFeed() {
         feeds.data.forEach(function (feed) {
             if (feed.story) {
                 var elem = formatFBFeed(feed);
-                $(fbFeed).append(elem);
+                $('#fbFeed').append(elem);
             }
 
         });

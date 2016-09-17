@@ -225,16 +225,21 @@
 
             <div class="col-md-6">
                 <ul class="nav nav-tabs nav-justified">
-                    <li class="active" role="presentation">
-                        <a href="#fbFeed" data-toggle="tab" aria-controls="fbFeed" role="tab"><img src="images/logos/FB-f-Logo__blue_29.png"> <img src="images/logos/facebook-min.png" height="20px"></a>
+                    <li class="active" role="presentation" id="fbTab">
+                        <a href="#fbFeed" data-toggle="tab" aria-controls="fbFeed" role="tab">
+                            <img src="images/logos/FB-f-Logo__blue_29.png" height="30px"> <img src="images/logos/facebook-min.png" height="15px"></a>
                     </li>
-                    <li>
+                    <li id="gitTab">
                         <a href="#gitFeed" data-toggle="tab" aria-controls="gitFeed" role="tab">
-                            <img src="images/logos/GitHub-Mark-32px.png" height="30px"> <img src="images/logos/GitHub_Logo.png" height="25px"></a>
+                            <img src="images/logos/Octocat.png" height="30px"> <img src="images/logos/GitHub_Logo.png" height="15px"></a>
                     </li>
-                    <li>
+                    <li id="stackTab">
                         <a href="#stackFeed" data-toggle="tab" aria-controls="stackFeed" role="tab">
-                            <img src="images/logos/stackoverflow.png" height="30px"></a>
+                            <img src="images/logos/stackoverflowIcon.png" height="30px"> <img src="images/logos/stackoverflow.png" height="15px"></a>
+                    </li>
+                    <li id="steamTab">
+                        <a href="#steamFeed" data-toggle="tab" aria-controls="steamFeed" role="tab">
+                            <img src="images/logos/steam_logo.png" height="30px"><img src="images/logos/steam.png" height="15px"></a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -245,6 +250,9 @@
 
                     </ul>
                     <ul class="list-group media-list media-list-stream tab-pane" id="stackFeed" role="tabpanel">
+
+                    </ul>
+                    <ul class="list-group media-list media-list-stream tab-pane" id="steamFeed" role="tabpanel">
 
                     </ul>
                 </div>
@@ -338,6 +346,7 @@
     <script src="scripts/facebook.js"></script>
     <script src="scripts/github.js"></script>
     <script src="scripts/stack.js"></script>
+    <script src="scripts/steam.js"></script>
     <script src="scripts/service.js"></script>
     <script src="scripts/analytics.js"></script>
 

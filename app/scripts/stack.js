@@ -1,20 +1,6 @@
 'use strict';
 
-google.load('feeds', '1');
-
-function formatGitContent(content) {
-    if (content.includes('<code>')) {
-        var res = content.split('<code>');
-        var res1 = res[1].split('</code>');
-        var commit  = res1[0].replace('href="', 'target="_blank" href="https://github.com');
-        res = content.split('<blockquote>');
-        res1 = res[1].split('</blockquote>');
-        var description = res1[0];
-        return ('<blockquote>' + description + '<footer>' + commit  + '</footer></blockquote>');
-    } else {
-        return '';
-    }
-}
+var stackLoaded = false;
 
 var timelineType = {
     accepted: 'Accepted An Answer',
@@ -46,7 +32,7 @@ function getStackFeeds() {
                     ('</a></div><div id="badge' + feedId + '"></div></div>')) +
                 '<div id="feedId' + feedId + '"></div>' +
                 '</li>';
-            $(stackFeed).append(elem);
+            $('#stackFeed').append(elem);
         });
         var feed = new google.feeds.Feed('http://stackoverflow.com/feeds/user/6778969');
         feed.setNumEntries(500);
@@ -81,7 +67,14 @@ function getStackFeeds() {
 
 }
 
-google.setOnLoadCallback(getStackFeeds);
+
+$('#stackTab').click(function () {
+    if (!stackLoaded) {
+        getStackFeeds();
+        stackLoaded = true;
+    }
+
+});
 
 function loadMoreStackFeed() {
 

@@ -27,6 +27,7 @@ function loadMoreFeed() {
     loadMoreFBFeed();
     loadMoreGitFeed();
     loadMoreStackFeed();
+    loadMoreStackFeed();
 }
 
 $(window).scroll(function () {

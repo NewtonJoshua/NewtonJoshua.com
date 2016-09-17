@@ -34,7 +34,7 @@ function gitHubFeeds() {
                     '</div>' +
                     '</li>';
 
-                $(gitFeed).append(elem);
+                $('#gitFeed').append(elem);
             });
         }
     });
