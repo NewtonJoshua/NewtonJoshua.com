@@ -33,6 +33,5 @@ function loadMoreFeed() {
 $(window).scroll(function () {
     if (isScrollBottom()) {
         loadMoreFeed();
-        console.debug('scroll end');
     }
 });

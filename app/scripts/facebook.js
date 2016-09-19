@@ -47,7 +47,7 @@ window.fbAsyncInit = function () {
             }
 
             if (response.error) {
-                console.debug(response.error.message);
+                console.error(response.error.message);
             }
         }
     );

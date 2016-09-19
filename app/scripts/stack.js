@@ -42,7 +42,6 @@ function getStackFeeds() {
                     var xmlFeedDate = (new Date(xmlFeed.publishedDate)).getTime();
                     var feedDate = (new Date(feed.creation_date * 1000)).getTime();
                     if (feed.timeline_type !== 'badge' && xmlFeed.title.includes(feed.title) && xmlFeedDate === feedDate) {
-                        console.log(xmlFeed.content);
                         $('#feedId' + key).append(xmlFeed.content);
                         return true;
                     }

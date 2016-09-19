@@ -6,7 +6,7 @@
 var refreshToken = '1/zKrnUuw8m9jlpSPwAMy81kfCelHOT0iyGCKvasFLXs5IgOrJDtdun6zK6XiATCKT';
 
 google.charts.load('current', {
-    'packages': ['corechart', 'geochart']
+    'packages': ['corechart', 'geochart', 'table']
 });
 
 //Draw country Chart
@@ -92,7 +92,6 @@ function gaGetCountry() {
                     var d = data.rows[i];
                     d[1] = Number(d[1]);
                 }
-                console.debug(data.rows);
                 drawRegionsMap(data.rows);
             } else {
                 console.debug(status);
@@ -119,7 +118,6 @@ function gaGetBrowser() {
                     var d = data.rows[i];
                     d[1] = Number(d[1]);
                 }
-                console.debug(data.rows);
                 drawPieChart(data.rows);
             } else {
                 console.debug(status);
