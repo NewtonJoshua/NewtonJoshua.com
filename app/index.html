@@ -21,8 +21,7 @@
     </title>
     <script src="lib/pace/pace.min.js"></script>
     <link href="lib/pace/pace-theme-fill-left.css" rel="stylesheet" />
-    <link href="lib/pace/pace-theme-corner-indicator.css" rel="stylesheet" />
-    <link href="lib/pace/pace-theme-center-simple.css" rel="stylesheet" />
+    <link href="lib/pace/pace-theme-center-radar.css" rel="stylesheet" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
     <link href="lib/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -68,13 +67,16 @@
 
                 <ul class="nav navbar-nav hidden-xs">
                     <li class="active">
-                        <a href="index.html">Home</a>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="photos.html">Photos</a>
                     </li>
                     <li>
                         <a href="profile.html">Profile</a>
                     </li>
                     <li>
-                        <a href="docs/index.html">Docs</a>
+                        <a href="developer.html">Developer</a>
                     </li>
                 </ul>
 
@@ -89,17 +91,25 @@
 
 
                 <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="notifications/index.html">Notifications</a></li>
-                    <li><a href="docs/index.html">Docs</a></li>
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="photos.html">Photos</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="developer.html">Developer</a>
+                    </li>
                     <li><a href="#" data-action="growl">Growl</a></li>
-                    <li><a href="login/index.html">Logout</a></li>
+                    <li><a href="login.html">Logout</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav hidden">
                     <li><a href="#" data-action="growl">Growl</a></li>
-                    <li><a href="login/index.html">Logout</a></li>
+                    <li><a href="login.html">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -245,7 +255,7 @@
                             <img src="images/logos/steam_logo.png" height="30px"><img src="images/logos/steam.png" height="15px"></a>
                     </li>
                 </ul>
-                <div class="tab-content">
+                <div class="tab-content" id="tabContent">
                     <ul class="list-group media-list media-list-stream tab-pane active" id="fbFeed" role="tabpanel">
 
                     </ul>

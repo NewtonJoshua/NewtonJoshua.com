@@ -24,10 +24,12 @@ function isScrollBottom() {
 }
 
 function loadMoreFeed() {
-    loadMoreFBFeed();
-    loadMoreGitFeed();
-    loadMoreStackFeed();
-    loadMoreStackFeed();
+    var tab = $('#tabContent'),
+        active = tab.find('.tab-pane.active'),
+        activeId = active[0].id;
+    if (activeId === 'fbFeed') {
+        loadMoreFBFeed();
+    }
 }
 
 $(window).scroll(function () {

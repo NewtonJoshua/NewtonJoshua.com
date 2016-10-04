@@ -28,7 +28,9 @@ function getStackFeeds() {
                 ' <div class="media-heading">' +
                 ' <small class="pull-right text-muted">' + formatDate(feed.creation_date * 1000) + '</small>' +
                 '<a href="' + feed.link + '"  target="_blank"><h5>' + timelineType[feed.timeline_type] + '</h5>' +
-                (feed.timeline_type !== 'badge' ? ('</div><blockquote>' + (feed.detail ? feed.detail : feed.title) + '</blockquote></div></a>') :
+                (feed.timeline_type !== 'badge' ? ('</div><blockquote>' +
+                        (feed.timeline_type !== 'commented' ? (feed.detail ? feed.detail : feed.title) : feed.title) +
+                        '</blockquote></div></a>') :
                     ('</a></div><div id="badge' + feedId + '"></div></div>')) +
                 '<div id="feedId' + feedId + '"></div>' +
                 '</li>';

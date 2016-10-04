@@ -41,7 +41,3 @@ function gitHubFeeds() {
 }
 
 google.setOnLoadCallback(gitHubFeeds);
-
-function loadMoreGitFeed() {
-
-}

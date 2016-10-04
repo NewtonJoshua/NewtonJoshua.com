@@ -3,6 +3,8 @@
 var feeds = [];
 var picUrl = '';
 var fbPaging = '';
+
+//Get FaceBook Feeds
 window.fbAsyncInit = function () {
     FB.init({
         appId: '771830059601215',
@@ -53,6 +55,7 @@ window.fbAsyncInit = function () {
     );
 };
 
+//Load more feeds on page down
 function loadMoreFBFeed() {
     $.get(fbPaging, function (feeds) {
         feeds.data.forEach(function (feed) {
