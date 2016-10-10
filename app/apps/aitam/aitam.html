@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the website of Newton Joshua. View his personal and professional details.">
+    <meta name="keywords" content="Newton Joshua, Angelin Newton, Angelin Elfieda, AITAM, Action Item Tracker, Action Item Tracking And Management, Java Developer, HTML5 Developer, profile">
+    <meta name="copyright" content="Copyright © 2016 Newton Joshua & Angelin Newton">
+    <meta name="author" content="Newton Joshua">
+    <meta name="designer" content="Newton Joshua">
+    <meta name="email" content="NeJo@NewtonJoshua.com">
+
+    <title>
+
+        Newton Joshua
+
+    </title>
+
+    <script src="../../lib/pace/pace.min.js"></script>
+    <link href="../../lib/pace/pace-theme-fill-left.css" rel="stylesheet" />
+    <link href="../../lib/pace/pace-theme-corner-indicator.css" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+    <link href="../../bootstrap-theme/docs/assets/css/toolkit.css" rel="stylesheet">
+    <link href="../../bootstrap-theme/docs/assets/css/docs.css" rel="stylesheet">
+    <link href="../../bootstrap-theme/docs/assets/css/application.css" rel="stylesheet">
+    <style>
+        /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+        /* this chunk of css is not part of the toolkit :) */
+        
+        body {
+            width: 1px;
+            min-width: 100%;
+            *width: 100%;
+        }
+    </style>
+
+</head>
+
+
+<body class="with-top-navbar">
+
+    <div class="growl" id="app-growl"></div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="../../images/logo-light.png" alt="brand">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-collapse-main">
+
+                <ul class="nav navbar-nav hidden-xs">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="photos.html">Photos</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Developer</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+                    <li>
+                        <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+                            <img class="img-circle" src="images/picture.jpg" id="thumbPic">
+                        </button>
+                    </li>
+                </ul>
+
+
+
+                <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="photos.html">Photos</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Developer</a>
+                    </li>
+                    <li><a href="#" data-action="growl">Growl</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav hidden">
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="docs-header" id="content">
+        <div class="container">
+            <h1>AITAM: Documentation</h1>
+            <div class=" row">
+                <div class="col-md-8">
+                    <p>
+                        AITAM is a collaborative tool to help associates to manage and track their action items to completion. AITAM can be used to Create, Assign, Track, Review and Manage the Action Items of a team.
+                    </p>
+                </div>
+                <div class="col-md-4">
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="font-family:Orbitron">AITAM</div>
+                        <div class="panel-body row">
+                            <div class="col-md-3">
+                                <img src="images/aitam.png" width="100%">
+                            </div>
+                            <div class="col-md-9">
+                                <font color="#204060" face="Orbitron" size="4">A
+                                            <font size="2" face="Noto Sans">ction</font> I
+                                <font size="2" face="Noto Sans">tem</font> T
+                                <font size="2" face="Noto Sans">racking</font> A
+                                <font size="2" face="Noto Sans">nd</font> M
+                                <font size="2" face="Noto Sans">anagement</font></font>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container docs-content">
+
+        <h1 id="contents">Contents</h1>
+        <ul id="markdown-toc">
+            <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+            <li><a href="#getting-started" id="markdown-toc-getting-started">Getting Started</a></li>
+            <ul>
+                <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+                <li><a href="#web-app" id="markdown-toc-web-app">Web App</a></li>
+                <li><a href="#mobile-web" id="markdown-toc-mobile-web">Mobile Web</a></li>
+                <li><a href="#mobile-app" id="markdown-toc-mobile-app">Mobile App</a></li>
+                <li><a href="#extension" id="markdown-toc-extension">Extension</a></li>
+            </ul>
+            <li><a href="#custom-builds" id="markdown-toc-custom-builds">Custom builds</a></li>
+            <li><a href="#basic-template" id="markdown-toc-basic-template">Basic template</a></li>
+            <li><a href="#utilities" id="markdown-toc-utilities">Utilities</a>
+                <ul>
+                    <li><a href="#positioning" id="markdown-toc-positioning">Positioning</a></li>
+                    <li><a href="#width" id="markdown-toc-width">Width</a></li>
+                    <li><a href="#margin-and-padding" id="markdown-toc-margin-and-padding">Margin and padding</a></li>
+                    <li><a href="#responsive-text-alignment" id="markdown-toc-responsive-text-alignment">Responsive text alignment</a></li>
+                </ul>
+            </li>
+            <li><a href="#components" id="markdown-toc-components">Components</a>
+                <ul>
+                    <li><a href="#entypo" id="markdown-toc-entypo">Entypo</a>
+                        <ul>
+                            <li><a href="#available-icons" id="markdown-toc-available-icons">Available icons</a></li>
+                            <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#outline-buttons" id="markdown-toc-outline-buttons">Outline buttons</a></li>
+                    <li><a href="#pill-buttons" id="markdown-toc-pill-buttons">Pill buttons</a></li>
+                    <li><a href="#avatar-list" id="markdown-toc-avatar-list">Avatar list</a></li>
+                    <li><a href="#growl" id="markdown-toc-growl">Growl</a></li>
+                    <li><a href="#profile-header" id="markdown-toc-profile-header">Profile header</a></li>
+                    <li><a href="#panel-profile" id="markdown-toc-panel-profile">Panel profile</a></li>
+                    <li><a href="#panel-link-list" id="markdown-toc-panel-link-list">Panel link list</a></li>
+                    <li><a href="#media-list-steam" id="markdown-toc-media-list-steam">Media list steam</a></li>
+                    <li><a href="#media-list-conversation" id="markdown-toc-media-list-conversation">Media list conversation</a></li>
+                    <li><a href="#media-list-users" id="markdown-toc-media-list-users">Media list users</a></li>
+                    <li><a href="#custom-form-controls" id="markdown-toc-custom-form-controls">Custom form controls</a></li>
+                    <li><a href="#custom-modals" id="markdown-toc-custom-modals">Custom Modals</a></li>
+                    <li><a href="#custom-containers" id="markdown-toc-custom-containers">Custom containers</a></li>
+                </ul>
+            </li>
+            <li><a href="#plugins" id="markdown-toc-plugins">Plugins</a>
+                <ul>
+                    <li><a href="#image-grids" id="markdown-toc-image-grids">Image grids</a>
+                        <ul>
+                            <li><a href="#options" id="markdown-toc-options">Options</a></li>
+                            <li><a href="#javascript-api" id="markdown-toc-javascript-api">JavaScript API</a></li>
+                            <li><a href="#data-api" id="markdown-toc-data-api">Data Api</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#zoom" id="markdown-toc-zoom">Zoom</a>
+                        <ul>
+                            <li><a href="#data-api-1" id="markdown-toc-data-api-1">Data API</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h1 id="getting-started">Getting Started</h1>
+        <h2 id="overview">Overview</h2>
+        <h4>What do we have here???</h4>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-12">
+                    <p><i>So, What's in my bag.. </i>
+                        <br>
+                    </p>
+                    The avatars of <a style="font-family:Orbitron">AITAM</a> are
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6"> <b>Web App: <br></b><img src="images/web.jpg" width="100%">
+                        </div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2"> <b>Mobile App: <br></b><img src="images/App.png" width="100%">
+                        </div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2"> <b>Extension: <br></b><img src="images/Extension.jpg" width="100%">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </figure>
+
+        <h4>What's in it for a team member?</h4>
+        <figure class="highlight">
+            <p><i>I've got a hell load of Action Items!!!! </i></p>
+            <p>
+                Which task has more priority? What is the due date for the task? Who is gonna review the task? Finally, What is the rating the reviewer has given for the completed task?
+                <br> Our cool pal <a style="font-family:Orbitron">AITAM</a> will help you with these.
+            </p>
+        </figure>
+
+        <h4>What's in it for a Manager?</h4>
+        <figure class="highlight">
+            <p><i>What on earth happened to those Action Items I've assigned to these guys?!!!! </i></p>
+            <p>What is the status of the tasks I assigned? Is the task past due date? Who is performing the ask? Finally, what is the comparative rating of my team members?
+                <br> Our strict officer <a style="font-family:Orbitron">AITAM</a> will help you with these.
+            </p>
+        </figure>
+
+        <h4>What does it actually do?</h4>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <i>It just make your terrible messy life a lot more easier. </i></p>
+                    <p>
+                    </p>
+                    Your pal <a style="font-family:Orbitron">AITAM</a> will,
+                    <ul>
+                        <li>Shows all the tasks related to you categorically</li>
+                        <li>Keeps track of onTime compliance and generate rating</li>
+                        <li>Notifies you of important updates</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-4" align="center">
+                    <img src="images/aitam.png" width="30%">
+                </div>
+            </div>
+        </figure>
+
+
+        <h4>What can Managers do?</h4>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <i>As a Manager you can</i>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Assign tasks to your team members</li>
+                        <li>Track the status of the tasks</li>
+                        <li>Review the tasks on completion</li>
+                        <li>Provide rating to tasks on closure</li>
+                        <li>Send tasks for ReWork if necessary</li>
+                        <li>View the comparative <a style="font-family:Orbitron">AITAM</a> generated rating</li>
+                        <li>View your TeamTree</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="images/Manager.jpg" width="100%">
+                </div>
+            </div>
+        </figure>
+
+        <h4>What can TeamMembers do?</h4>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <i>As a TeamMember you can</i>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Accept the tasks assigned to you</li>
+                        <li>Appeal for extension of task due date, if required</li>
+                        <li>Update the status of the task os things progress</li>
+                        <li>Self Assign tasks</li>
+                        <li>Request a Self Assigned task to be officially Approved</li>
+                        <li>View your <a style="font-family:Orbitron">AITAM</a> generated rating</li>
+                        <li>Manage your Profile</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/Team-member.jpg" width="100%">
+                </div>
+            </div>
+        </figure>
+
+        <h4>How is it structured?</h4>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <a style="font-family:Orbitron">AITAM </a><i>is split into 3 sections</i>
+                        <br>
+                    </p>
+                    <ul>
+                        <li><b>myTask:</b> Tasks assigned to you will be shown here</li>
+                        <li><b>ourTask:</b> Tasks you have assigned will be shown here. It'll appear only for Managers.</li>
+                        <li><b>myProfile:</b> Your basic prfile details will be shown here. It'll appear only in Web browser.</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="images/sections.png" width="100%">
+                </div>
+            </div>
+        </figure>
+
+        <h2 id="web-app">Web App</h2>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-8">
+                    <p><i>The classic way of doing things.</i></p>
+                    <p>
+                        Visit the <a style="font-family:Orbitron">AITAM </a> website in your web browser. The Web App has the complete sets of <a style="font-family:Orbitron">AITAM </a> functinalities, including Admin portal, Profile management, Password Management, Team Tree, etc..
+                        <br> Web App is the gateway to install Chrome Extension.
+                        <br>
+                        <br>
+                        <a style="font-family:Orbitron">AITAM </a> Web App is developed using Java Web Components (J2EE), Java Script, Google Charts API, Google reCaptcha API etc. and is hosted in Google Cloud Platform.
+
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/web.jpg" width="100%">
+                </div>
+            </div>
+        </figure>
+
+        <h2 id="mobile-web">Mobile Web</h2>
+        <figure class="highlight">
+            <div class=" row">
+                <div class="col-md-8">
+                    <p><i>The classy way of doing things.</i></p>
+                    <p>
+                        Visit the <a style="font-family:Orbitron">AITAM </a> website in your mobile browser to view the Mobile Website.
+                        <br> Mobile Website has the most of the functinalties of the Mobile App and has the same User Interface
+                        <br> Mobile Website is the gateway to install the Mobile Apps. The Mobile Website detects the Operating System of the mobile device (Android, BlackBerry, iOS or Windows). Then it'll prompt the user to download the Mobile App for the corresponding OS
+                        <br>
+                        <br>
+                        <a style="font-family:Orbitron">AITAM </a> The Mobile Website is developed using HTML5, AngularJS, CSS3, JavaScript, Ionic Framework, Google Charts API etc. and is hosted in Google Cloud Platform.
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/mobweb.png" width="100%">
+                </div>
+            </div>
+        </figure>
+        <h2 id="mobile-app">Mobile App</h2>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-8">
+                    <p><i>The handy way of doing things.</i></p>
+                    <p>
+                        You can download the <a style="font-family:Orbitron">AITAM </a> Mobile App from the Mobile Website. The Mobile App is the ultimate portable solution for <a style="font-family:Orbitron">AITAM </a>
+                        <br> Mobile App notifies the user of any new tasks in thier queue via push Notification. So you can stay up-to-date
+                        <br>
+                        <a style="font-family:Orbitron">AITAM </a> Mobile App is available for Android, BlackBerry, iOS and Windows
+                        <br>
+                        <br>
+                        <a style="font-family:Orbitron">AITAM </a> Mobile App is developed using PhoneGap / Cordova, HTML5, AngularJS, CSS3, JavaScript, Ionic Framework, Google Charts API , Ionic Push API etc. and is hosted in Google Cloud Platform.
+                    </p>
+                    <div class=" row">
+
+                        <div class="col-md-3"><img src="images/Android_robot.svg.png" width="80%"></div>
+                        <div class="col-md-3"><img src="images/Blackberry_Logo.svg.png" width="100%"></div>
+                        <div class="col-md-3"><img src="images/apple.jpg" width="100%"></div>
+                        <div class="col-md-3"><img src="images/Windows_Phone_logo.png" width="100%"></div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="images/App.png" width="100%">
+                </div>
+            </div>
+        </figure>
+
+        <h2 id="extension">Extension</h2>
+        <figure class="highlight">
+            <div class="row">
+                <div class="col-md-8">
+                    <p><i>The trendy way of doing things.</i></p>
+                    <p>
+                        You can install <a style="font-family:Orbitron">AITAM </a> Extension your web browser from the <a style="font-family:Orbitron">AITAM </a> Web App. As of now it is available for Google Chrome alone
+                        <br> Extension will provide you the summary of number of tasks under various categories in your queue, It'll display a desktop notification if a new task jumps into your queue.
+                        <br>
+                        <br>
+                        <a style="font-family:Orbitron">AITAM </a> Extension is developed using HTML5, AngularJS, CSS3, JavaScript, Google cloud Messaging, etc.. and is hosted in Google Cloud Platform.
+                    </p>
+                    <div class=" row">
+                        <div class="col-md-3"><img src="images/chrome.jpg" width="100%"></div>
+                        <div class="col-md-3"><img src="images/chrome-web.png" width="100%"></div>
+                        <div class="col-md-6"><img src="images/Extension_notification.jpg" width="100%"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/Extension.jpg" width="100%">
+                </div>
+            </div>
+        </figure>
+
+    </div>
+
+    <script src="../../bootstrap-theme/docs/assets/js/jquery.min.js "></script>
+    <script src="../../bootstrap-theme/docs/assets/js/chart.js "></script>
+    <script src="../../bootstrap-theme/docs/assets/js/toolkit.js "></script>
+    <script src="../../bootstrap-theme/docs/assets/js/application.js "></script>
+
+    <script>
+        // execute/clear BS loaders for docs
+        $(function () {
+            if (window.BS && window.BS.loader && window.BS.loader.length) {
+                while (BS.loader.length) {
+                    (BS.loader.pop())()
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

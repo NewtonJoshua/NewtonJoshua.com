@@ -64,10 +64,10 @@
                     <li>
                         <a href="index.html">Home</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">Photos</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="profile.html">Profile</a>
                     </li>
                     <li>
@@ -111,43 +111,12 @@
     </nav>
 
 
-    <div class="profile-header text-center" id="coverPic" style="background-image: url(bootstrap-theme/docs/assets/img/iceland.jpg) no - repeat center center;">
-        <div class="container">
-            <div class="container-inner">
-                <img class="img-circle media-object" style="height:50px; width:50px;" id="profilePic" />
-                <h4 class="profile-header-user">Newton Joshua</h4>
-            </div>
-        </div>
-
-        <nav class="profile-header-nav">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#">Photos</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="container m-y-md" data-grid="images" id="fbPics">
-    </div>
-
 
     <script src="bootstrap-theme/docs/assets/js/jquery.min.js"></script>
     <script src="bootstrap-theme/docs/assets/js/chart.js"></script>
     <script src="bootstrap-theme/docs/assets/js/toolkit.js"></script>
     <script src="bootstrap-theme/docs/assets/js/application.js"></script>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+
     <script src="scripts/photos.js"></script>
     <script>
         // execute/clear BS loaders for docs

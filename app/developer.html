@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the website of Newton Joshua. View his personal and professional details.">
+    <meta name="keywords" content="Newton Joshua, Angelin Newton, Angelin Elfieda, AITAM, Action Item Tracker, Action Item Tracking And Management, Java Developer, HTML5 Developer, profile">
+    <meta name="copyright" content="Copyright © 2016 Newton Joshua & Angelin Newton">
+    <meta name="author" content="Newton Joshua">
+    <meta name="designer" content="Newton Joshua">
+    <meta name="email" content="NeJo@NewtonJoshua.com">
+
+    <title>
+
+        Newton Joshua
+
+    </title>
+
+    <script src="lib/pace/pace.min.js"></script>
+    <link href="lib/pace/pace-theme-fill-left.css" rel="stylesheet" />
+    <link href="lib/pace/pace-theme-corner-indicator.css" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+    <link href="bootstrap-theme/docs/assets/css/toolkit-minimal.css" rel="stylesheet">
+    <link href="bootstrap-theme/docs/assets/css/toolkit.css" rel="stylesheet">
+
+    <link href="bootstrap-theme/docs/assets/css/application.css" rel="stylesheet">
+    <link href="bootstrap-theme/docs/assets/css/application-minimal.css" rel="stylesheet">
+    <style>
+        /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+        /* this chunk of css is not part of the toolkit :) */
+        
+        @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+            body {
+                width: 1px;
+                min-width: 100%;
+                *width: 100%;
+            }
+            #stage {
+                height: 1px;
+                overflow: auto;
+                min-height: 100vh;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body class="with-top-navbar">
+
+    <div class="growl" id="app-growl"></div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo-light.png" alt="brand">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-collapse-main">
+
+                <ul class="nav navbar-nav hidden-xs">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Photos</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li class="active">
+                        <a href="developer.html">Developer</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+                    <li>
+                        <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+                            <img class="img-circle" src="images/picture.jpg" id="thumbPic">
+                        </button>
+                    </li>
+                </ul>
+
+
+
+                <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                    <li class="active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="photos.html">Photos</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Developer</a>
+                    </li>
+                    <li><a href="#" data-action="growl">Growl</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav hidden">
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container p-t-md">
+        <div class="row">
+
+
+            <div class="col-md-9">
+
+                <!--                Apps-->
+                <div class="panel panel-default visible-md-block visible-lg-block">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                                <h6 class="text-muted text-uppercase">Apps</h6>
+                                <h3 class="m-t-0 m-b">Software built on pride and love of subject is superior to software built for profit.</h3>
+                            </div>
+                        </div>
+
+                        <!--                            NewtonJoshua.com-->
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7 col-sm-6 text-xs-center text-sm-left">
+                                <p><strong>NewtonJoshua.com</strong></p>
+                                <p>
+                                    This is the official website of Newon Joshua. You are currently in it
+                                    <span class="icon icon-emoji-neutral"></span>
+                                </p>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                                    <a href="#" class="btn btn-default btn-borderless" role="button">
+                                        <span class="statcard-desc">Documentation</span>
+                                    </a>
+                                    <a href="#" class="btn btn-default btn-borderless" role="button">
+                                        <span class="statcard-desc">Code</span>
+                                    </a>
+                                </div>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                                    <a href="#" class="btn btn-default btn-borderless" role="button">
+                                        <span class="statcard-desc">Unit Testing</span>
+                                    </a>
+                                    <a href="#" class="btn btn-default btn-borderless" role="button">
+                                        <span class="statcard-desc">Automation Testing</span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-5 col-sm-6 ">
+                                <img src="images/logos/logo0trans-compressed.png" class="app-translate-50" style="width:100%">
+                            </div>
+                        </div>
+
+
+                        <!--                            AITAM-->
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-5 col-sm-6">
+                                <img src="images/logos/AITAM.png" class="app-translate-5" style="width:100%">
+                                <img src="images/logos/AITAM-title-trans.png" class="app-translate-5" style="width:100%">
+                                <hr class="m-t-0 m-b-lg m-x-auto visible-xs">
+                            </div>
+                            <div class="col-md-7 col-sm-6 text-xs-center text-sm-left">
+                                <p><strong>AITAM</strong></p>
+                                <p>
+                                    AITAM is a collaborative tool to help associates to manage and track their action items to completion. AITAM can be used to Create, Assign, Track, Review and Manage the Action Items of a team.
+                                </p>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                                    <a href="apps/aitam/aitam.html" target="_blank" class="btn btn-default btn-borderless" role="button" data-toggle="tooltip" title="view the Documentation of AITAM">
+                                        <span class="statcard-desc">Documentation</span>
+                                    </a>
+                                    <a href="http://aitam.newtonjoshua.com" target="_blank" class="btn btn-default btn-borderless" role="button" data-toggle="tooltip" title="view Web App @ http://aitam.newtonjoshua.com">
+                                        <span class="statcard-desc">Web App</span>
+                                    </a>
+                                </div>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                                    <a href="https://github.com/NewtonJoshua/AITAM-v1/blob/master/docs/AITAM.apk?raw=true" class="btn btn-default btn-borderless" role="button" data-toggle="tooltip" title="download AITAM App for Android and BlackBerry">
+                                        <span class="statcard-desc">Mobile App</span>
+                                    </a>
+                                    <a href="https://chrome.google.com/webstore/detail/aitam-action-item-trackin/kchdcdekjfkcjdoighhbghbboomaabaa" class="btn btn-default btn-borderless" target="_blank" role="button" data-toggle="tooltip" title="get AITAM extension for chrome browser">
+                                        <span class="statcard-desc">Chrome Extension</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--                            NewtonJoshua.com v1-->
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7 col-sm-6 text-xs-center text-sm-left">
+                                <p><strong>NewtonJoshua.com ~v1</strong></p>
+                                <p>
+                                    This is the older version (v1) of NewtonJoshua.com
+                                    <br> It was developed as an experimental project
+                                </p>
+
+                                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                                    <a href="http://v1.newtonjoshua.com/" target="_blank" class="btn btn-default btn-borderless" role="button" data-toggle="tooltip" title="view Web App @ http://v1.NewtonJoshua.com">
+                                        <span class="statcard-desc">Web App</span>
+                                    </a>
+                                    <a href="https://github.com/NewtonJoshua/NewtonJoshua-v1" target="_blank" class="btn btn-default btn-borderless" role="button" data-toggle="tooltip" title="view the code">
+                                        <span class="statcard-desc">Code</span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-5 col-sm-6 ">
+
+                                <img src="images/logos/newtonJoshuav1.png" class="app-translate-50" style="width:100%">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <!--                Components-->
+                <div class="panel panel-default visible-md-block visible-lg-block ">
+                    <div class="panel-body ">
+                        <div class="row m-b-lg ">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 ">
+                                <h6 class="text-muted text-uppercase ">Open Source Components</h6>
+                                <h3 class="m-t-0 m-b ">Open source isn’t about saving money, it’s about doing more stuff</h3>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-sm-6 ">
+                                <ul class="featured-list ">
+                                    <li class="m-b-lg ">
+                                        <div class="featured-list-icon text-primary ">
+                                            <span class="icon icon-image "></span>
+                                        </div>
+                                        <p class="featured-list-icon-text m-b-0 "><strong>Ionic Cloud</strong></p>
+                                        <p class="featured-list-icon-text ">
+                                            We process all the images you upload and take full advantage of modern cloud based storage to host them at blazing fast speeds.
+                                        </p>
+                                    </li>
+
+
+                                    <li class="m-b-lg ">
+                                        <div class="featured-list-icon text-primary ">
+                                            <span class="icon icon-hour-glass "></span>
+                                        </div>
+                                        <p class="featured-list-icon-text m-b-0 "><strong>Name Validator</strong></p>
+                                        <p class="featured-list-icon-text ">
+                                            This means you save tons of time by using our world class task manager and calendar and constantly reminds you how great it is.
+                                        </p>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 ">
+                                <ul class="featured-list ">
+                                    <li class="m-b-lg ">
+                                        <div class="featured-list-icon text-primary ">
+                                            <span class="icon icon-cloud "></span>
+                                        </div>
+                                        <p class="featured-list-icon-text m-b-0 "><strong>Solar Calc</strong></p>
+                                        <p class="featured-list-icon-text ">
+                                            Do it over the cloud, from anywhere, on any device. Mochi is super fast and always available, to not only you, but all your friends
+                                        </p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--                Documentation-->
+                <div class="panel panel-default visible-md-block visible-lg-block ">
+                    <div class="panel-body ">
+                        <div class="row m-b-lg ">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 ">
+                                <h6 class="text-muted text-uppercase ">Documentation</h6>
+                                <h3 class="m-t-0 m-b ">If you didn't document it, you didn't do it</h3>
+                            </div>
+                        </div>
+
+                        <div class="row app-marketing-grid ">
+                            <div class="col-sm-4 p-x-md m-b-lg ">
+                                <img class="m-b " src="assets/img/startup-9.svg ">
+                                <p><strong>Ionic Cloud for Yeoman Ionic Projects </strong> We’re always here for you no matter what time of day.</p>
+                            </div>
+                            <div class="col-sm-4 p-x-md m-b-lg ">
+                                <img class="m-b " src="assets/img/startup-10.svg ">
+                                <p><strong>Facebook Feeds</strong> We automatically handle all sales analytics.</p>
+                            </div>
+                            <div class="col-sm-4 p-x-md m-b-lg ">
+                                <img class="m-b " src="assets/img/startup-11.svg ">
+                                <p><strong>Google Feeds</strong> Our data analysis is distributed, so it processes in seconds.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-3 ">
+                <div class="panel panel-default m-b-md hidden-xs " height="100% ">
+                    <div class="panel-body ">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js "></script>
+                        NewtonJoshua.com
+                        <ins class="adsbygoogle " style="display:block " data-ad-client="ca-pub-2064100791057746 " data-ad-slot="5039256119 " data-ad-format="auto "></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        <br>
+                        <img src="images/logos/powered_by_google_on_white_hdpi.png " width="50% ">
+                    </div>
+                </div>
+
+                <div class="panel panel-default panel-link-list ">
+                    <div class="panel-body ">
+                        © 2016 NewtonJoshua.com
+
+                        <a href="# ">About</a>
+                        <a href="# ">Help</a>
+                        <a href="# ">Terms</a>
+                        <a href="# ">Privacy</a>
+                        <a href="# ">Cookies</a>
+                        <a href="# ">Ads </a>
+
+                        <a href="# ">info</a>
+                        <a href="# ">Brand</a>
+                        <a href="# ">Blog</a>
+                        <a href="# ">Status</a>
+                        <a href="# ">Apps</a>
+                        <a href="# ">Jobs</a>
+                        <a href="# ">Advertise</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="bootstrap-theme/docs/assets/js/jquery.min.js "></script>
+    <script src="bootstrap-theme/docs/assets/js/chart.js "></script>
+    <script src="bootstrap-theme/docs/assets/js/toolkit.js "></script>
+    <script src="bootstrap-theme/docs/assets/js/application.js "></script>
+
+    <script src="scripts/photos.js "></script>
+    <script>
+        // execute/clear BS loaders for docs
+        $(function () {
+            if (window.BS && window.BS.loader && window.BS.loader.length) {
+                while (BS.loader.length) {
+                    (BS.loader.pop())()
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
