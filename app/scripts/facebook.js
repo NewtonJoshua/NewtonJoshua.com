@@ -20,7 +20,6 @@ window.fbAsyncInit = function () {
         },
         function (response) {
             if (response.picture.data.url) {
-                console.debug('updated');
                 document.getElementById('myPicture').src = response.picture.data.url;
                 document.getElementById('thumbPic').src = response.picture.data.url;
                 picUrl = response.picture.data.url;
@@ -28,7 +27,6 @@ window.fbAsyncInit = function () {
                 picUrl = 'images/picture.jpg';
             }
             if (response.cover.source) {
-                console.debug('updated');
                 document.getElementById('cover').style.backgroundImage = 'url(' + response.cover.source + ')';
             }
             if (response.feed.data) {
