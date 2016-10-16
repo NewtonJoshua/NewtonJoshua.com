@@ -36,6 +36,8 @@ function getStackFeeds() {
                 '</li>';
             $('#stackFeed').append(elem);
         });
+
+        // Display detailed content
         var feed = new google.feeds.Feed('http://stackoverflow.com/feeds/user/6778969');
         feed.setNumEntries(500);
         feed.load(function (result) {
@@ -50,6 +52,8 @@ function getStackFeeds() {
                 });
             });
         });
+
+        // Display Badge details
         $.get('https://api.stackexchange.com/2.2/users/6778969/badges?order=desc&sort=rank&site=stackoverflow&filter=!4(EI32hSwYgOGH2hM', function (badges) {
             badges.items.forEach(function (badge) {
                 feedArray.some(function (feed, key) {
