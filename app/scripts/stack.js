@@ -17,7 +17,7 @@ var feedArray = [];
 var feedId = 0;
 
 function getStackFeeds() {
-    $.get('https://api.stackexchange.com/2.2/users/6778969/timeline?site=stackoverflow&filter=!))x30_z', function (feeds) {
+    $.get('https://api.stackexchange.com/2.2/users/6778969/timeline?site=stackoverflow&pagesize=100&filter=!))x30_z', function (feeds) {
         feeds.items.forEach(function (feed) {
             feedId++;
             feedArray[feedId] = feed;
@@ -45,7 +45,7 @@ function getStackFeeds() {
                 feedArray.some(function (feed, key) {
                     var xmlFeedDate = (new Date(xmlFeed.publishedDate)).getTime();
                     var feedDate = (new Date(feed.creation_date * 1000)).getTime();
-                    if (feed.timeline_type !== 'badge' && xmlFeed.title.includes(feed.title) && xmlFeedDate === feedDate) {
+                    if (feed.timeline_type !== 'badge' && (xmlFeed.title.indexOf(feed.title) !== -1) && xmlFeedDate === feedDate) {
                         $('#feedId' + key).append(xmlFeed.content);
                         return true;
                     }

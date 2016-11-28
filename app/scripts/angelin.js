@@ -1,3 +1,5 @@
+'use strict';
+
 // FB
 
 window.fbAsyncInit = function () {
@@ -11,7 +13,7 @@ window.fbAsyncInit = function () {
     FB.api(
         '/' + fbId,
         'GET', {
-            fields: 'picture{url},cover,feed{story,from}',
+            fields: 'picture{url},cover',
             access_token: accessToken
         },
         function (response) {
@@ -20,17 +22,6 @@ window.fbAsyncInit = function () {
             }
             if (response.cover.source) {
                 document.getElementById('cover').style.backgroundImage = 'url(' + response.cover.source + ')';
-            }
-            if (response.feed.data) {
-                response.feed.data.forEach(function (feed) {
-                    if (feed.story) {
-                        if (feed.from.id === fbId) {
-                            feeds.push(feed);
-                        }
-                    }
-                });
-                var statusMsg = feeds[0].story;
-                document.getElementById('myStatus').innerHTML = statusMsg;
             }
             if (response.error) {
                 console.error(response.error.message);
@@ -94,19 +85,19 @@ var timelineType = {
     suggested: 'Suggested An Edit'
 };
 
-var feedArray = [];
-var feedId = 0;
 
 function getStackFeeds() {
 
-    $.get('https://api.stackexchange.com/2.2/users/6827586/timeline?site=stackoverflow&filter=!))x30_z', function (feeds) {
+    $.get('https://api.stackexchange.com/2.2/users/7029019/timeline?site=stackoverflow&filter=!))x30_z', function (feeds) {
         feeds.items.forEach(function (feed) {
+            var title = feed.detail || feed.title;
             var feedDate = formatDate(feed.creation_date * 1000);
             var elem = '<li class="list-group-item p-a">' +
                 '<div class="media-body">' +
                 ' <div class="media-heading">' +
                 ' <small class="pull-right text-muted">' + feedDate + '</small>' +
                 '<a href="' + feed.link + '"  target="_blank"><h5>' + timelineType[feed.timeline_type] + '</h5></a></div></div>' +
+                '<p>' + (feed.timeline_type === 'badge' ? '<img src="images/badges/bronze.jpg"> ' : '') + title + '</p>' +
                 '</li>';
             $('#stackFeed').append(elem);
         });

@@ -69,13 +69,18 @@ function loadMoreFBFeed() {
     });
 }
 
+function formatFBDate(inputDate) {
+    var trimmedDate = inputDate.slice(0, 10);
+    return formatDate(trimmedDate);
+}
+
 function formatFBFeed(feed) {
     return '<li class="media list-group-item p-a">' +
         '<a class="media-left" href="#">' +
         '<img class="media-object img-circle" src="' + picUrl + '">' + '</a>' +
         '<div class="media-body">' +
         ' <div class="media-heading">' +
-        ' <small class="pull-right text-muted">' + formatDate(feed.created_time) + '</small>' +
+        ' <small class="pull-right text-muted">' + formatFBDate(feed.created_time) + '</small>' +
         ' <h5><a href="' + (feed.permalink_url || feed.link) + '"  target="_blank">' + feed.story + '</a></h5>' +
         '</div>' +
         '<p>' + (feed.message ? feed.message : '') + '</p>' +

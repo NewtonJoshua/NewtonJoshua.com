@@ -2,8 +2,10 @@
 
 google.load('feeds', '1');
 
+var gitFeedsLoaded = false;
+
 function formatGitContent(content) {
-    if (content.includes('<code>')) {
+    if (content.indexOf('<code>') !== -1) {
         var res = content.split('<code>');
         var res1 = res[1].split('</code>');
         var commit  = res1[0].replace('href="', 'target="_blank" href="https://github.com');
@@ -38,6 +40,15 @@ function gitHubFeeds() {
             });
         }
     });
+    gitFeedsLoaded = true;
 }
 
-google.setOnLoadCallback(gitHubFeeds);
+//google.setOnLoadCallback(gitHubFeeds);
+
+
+
+$('#gitTab').click(function () {
+    if (!gitFeedsLoaded) {
+        gitHubFeeds();
+    }
+});
