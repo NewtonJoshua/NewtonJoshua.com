@@ -38,19 +38,19 @@ function getStackFeeds() {
         });
 
         // Display detailed content
-        var feed = new google.feeds.Feed('http://stackoverflow.com/feeds/user/6778969');
-        feed.setNumEntries(500);
-        feed.load(function (result) {
-            result.feed.entries.forEach(function (xmlFeed) {
+        $.get('https://newton-angelin.appspot.com/feed?url=http://stackoverflow.com/feeds/user/6778969', function(result){
+            if (!result.error) {
+                result.feed.entry.forEach(function (xmlFeed) {
                 feedArray.some(function (feed, key) {
-                    var xmlFeedDate = (new Date(xmlFeed.publishedDate)).getTime();
+                    var xmlFeedDate = (new Date(xmlFeed.published)).getTime();
                     var feedDate = (new Date(feed.creation_date * 1000)).getTime();
-                    if (feed.timeline_type !== 'badge' && (xmlFeed.title.indexOf(feed.title) !== -1) && xmlFeedDate === feedDate) {
-                        $('#feedId' + key).append(xmlFeed.content);
+                    if (feed.timeline_type !== 'badge' && (xmlFeed.title.content.indexOf(feed.title) !== -1) && xmlFeedDate === feedDate) {
+                        $('#feedId' + key).append(xmlFeed.summary.content);
                         return true;
                     }
                 });
             });
+            }
         });
 
         // Display Badge details

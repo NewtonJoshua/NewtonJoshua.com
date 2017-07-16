@@ -1,7 +1,5 @@
 'use strict';
 
-google.load('feeds', '1');
-
 var gitFeedsLoaded = false;
 
 function formatGitContent(content) {
@@ -19,20 +17,18 @@ function formatGitContent(content) {
 }
 
 function gitHubFeeds() {
-    var feed = new google.feeds.Feed('https://github.com/NewtonJoshua.atom');
-    feed.setNumEntries(500);
-    feed.load(function (result) {
+    $.get('https://newton-angelin.appspot.com/feed?url=https://github.com/NewtonJoshua.atom', function(result){
         if (!result.error) {
-            result.feed.entries.forEach(function (feed) {
+            result.feed.entry.forEach(function (feed) {
                 var elem = '<li class="media list-group-item p-a">' +
                     '<a class="media-left" href="#">' +
                     '<img class="media-object img-circle" src="https://avatars1.githubusercontent.com/u/12285163?v=3&s=460">' + '</a>' +
                     '<div class="media-body">' +
                     ' <div class="media-heading">' +
-                    ' <small class="pull-right text-muted">' + formatDate(feed.publishedDate) + '</small>' +
-                    ' <h5><a href="' + feed.link + '"  target="_blank">' + feed.title + '</a></h5>' +
+                    ' <small class="pull-right text-muted">' + formatDate(feed.published) + '</small>' +
+                    ' <h5><a href="' + feed.link.href + '"  target="_blank">' + feed.title.content + '</a></h5>' +
                     '</div>' +
-                    formatGitContent(feed.content) +
+                    formatGitContent(feed.content.content) +
                     '</div>' +
                     '</li>';
 
@@ -42,10 +38,6 @@ function gitHubFeeds() {
     });
     gitFeedsLoaded = true;
 }
-
-//google.setOnLoadCallback(gitHubFeeds);
-
-
 
 $('#gitTab').click(function () {
     if (!gitFeedsLoaded) {
