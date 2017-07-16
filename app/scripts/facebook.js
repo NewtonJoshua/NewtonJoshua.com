@@ -11,7 +11,7 @@ window.fbAsyncInit = function () {
         xfbml: true,
         version: 'v2.7'
     });
-    var accessToken = 'EAAK9ZBbCHjT8BAOqRQEGOTMGPrEkpC6t5wowBtF8ZB35dDhKFnx9ffiZCbyLr7lfL74twAuiiIl9US3tNrfvCE7kmvKifZABh2bOzaBPdBvSBAilKfxFPdGXMhcDuPtglCJbWcUNliynsje6LIQP0W9sNFcMnpMZD';
+    var accessToken = 'EAAK9ZBbCHjT8BADwrM3oubWtUAIeZCyXeKiA7JAaTFmIgnt9e7QcSCYvfZAI5tUA1xxbFhrcpkwINbMLn52sXD68a7VYdQgOmO62uTfrzS5QJAso2VAX2JbQZAKGAHVPb3mrW3aVteJqHMGqkoOoO8C97ez74ZBQZD';
     FB.api(
         '/me',
         'GET', {
@@ -87,6 +87,6 @@ function formatFBFeed(feed) {
         '<div class="media-body-inline-grid" data-grid="images">' +
         (feed.full_picture ? '<img data-width="640" data-height="640" data-action="zoom" src=' + feed.full_picture + '>' : '') +
         '</div>' +
-        (feed.likes.summary.total_count ? ('<button type="button" class="btn btn-xs btn-pill btn-default"><img src="images/logos/ThumbsUp%20Small.png" height="15px"> ' + feed.likes.summary.total_count + ' </button>') : '') +
+        (feed.likes && feed.likes.summary.total_count ? ('<button type="button" class="btn btn-xs btn-pill btn-default"><img src="images/logos/ThumbsUp%20Small.png" height="15px"> ' + feed.likes.summary.total_count + ' </button>') : '') +
         '</li>';
 }

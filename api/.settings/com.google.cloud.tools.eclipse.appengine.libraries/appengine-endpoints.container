@@ -1,0 +1,46 @@
+{
+  "description": "Google Cloud Endpoints",
+  "path": "com.google.cloud.tools.eclipse.appengine.libraries/appengine-endpoints",
+  "entries": [
+    {
+      "accessRules": [
+        {
+          "ruleKind": "FORBIDDEN",
+          "pattern": "com/google/appengine/repackaged/**"
+        }
+      ],
+      "sourceAttachmentPath": "",
+      "path": "com/google/appengine/appengine-endpoints/1.9.51/appengine-endpoints-1.9.51.jar",
+      "attributes": [
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.repository",
+          "value": "central"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.groupid",
+          "value": "com.google.appengine"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.artifactId",
+          "value": "appengine-endpoints"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.type",
+          "value": "jar"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.version",
+          "value": "1.9.51"
+        },
+        {
+          "name": "org.eclipse.jst.component.dependency",
+          "value": "/WEB-INF/lib"
+        },
+        {
+          "name": "javadoc_location",
+          "value": "https://cloud.google.com/appengine/docs/java/endpoints/javadoc/"
+        }
+      ]
+    }
+  ]
+}

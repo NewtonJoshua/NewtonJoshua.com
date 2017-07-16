@@ -13,7 +13,7 @@ window.fbAsyncInit = function () {
         xfbml: true,
         version: 'v2.7'
     });
-    var accessToken = 'EAAK9ZBbCHjT8BAOqRQEGOTMGPrEkpC6t5wowBtF8ZB35dDhKFnx9ffiZCbyLr7lfL74twAuiiIl9US3tNrfvCE7kmvKifZABh2bOzaBPdBvSBAilKfxFPdGXMhcDuPtglCJbWcUNliynsje6LIQP0W9sNFcMnpMZD';
+    var accessToken = 'EAAK9ZBbCHjT8BADwrM3oubWtUAIeZCyXeKiA7JAaTFmIgnt9e7QcSCYvfZAI5tUA1xxbFhrcpkwINbMLn52sXD68a7VYdQgOmO62uTfrzS5QJAso2VAX2JbQZAKGAHVPb3mrW3aVteJqHMGqkoOoO8C97ez74ZBQZD';
     FB.api(
         '/me',
         'GET', {
