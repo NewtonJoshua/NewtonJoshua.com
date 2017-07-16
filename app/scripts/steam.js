@@ -3,7 +3,7 @@
 var steamLoaded = false;
 
 function getSteamFeeds() {
-    $.get('https://1-dot-newton-angelin.appspot.com/steamfeeds',
+    $.get('https://newton-angelin.appspot.com/steamfeeds',
         function (feeds) {
             var avatar = feeds.player.avatarfull;
             var profile = feeds.player.profileurl;

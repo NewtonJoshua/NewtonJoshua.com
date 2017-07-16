@@ -1,0 +1,30 @@
+language: node_js
+
+node_js:
+- '6.9'
+
+branches:
+  only:
+  - master
+
+before_script:
+- npm install -g firebase-tools
+
+script: 
+
+after_success:
+- firebase deploy --token $FIREBASE_TOKEN
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
+
+deploy:
+  provider: gae
+  keyfile: gae-client-secret.json
+  project: newton-angelin
+  
+before_install:
+- openssl aes-256-cbc -K $encrypted_e7bba2291769_key -iv $encrypted_e7bba2291769_iv
+  -in gae-client-secret.json.enc -out gae-client-secret.json -d
