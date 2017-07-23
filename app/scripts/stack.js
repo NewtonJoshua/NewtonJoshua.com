@@ -38,19 +38,20 @@ function getStackFeeds() {
         });
 
         // Display detailed content
-        $.get('https://newton-angelin.appspot.com/feed?url=http://stackoverflow.com/feeds/user/6778969', function(result){
+        $.get('https://newtonjoshua-com.appspot.com/feed?url=http://stackoverflow.com/feeds/user/6778969', function (result) {
             if (!result.error) {
                 result.feed.entry.forEach(function (xmlFeed) {
-                feedArray.some(function (feed, key) {
-                    var xmlFeedDate = (new Date(xmlFeed.published)).getTime();
-                    var feedDate = (new Date(feed.creation_date * 1000)).getTime();
-                    if (feed.timeline_type !== 'badge' && (xmlFeed.title.content.indexOf(feed.title) !== -1) && xmlFeedDate === feedDate) {
-                        $('#feedId' + key).append(xmlFeed.summary.content);
-                        return true;
-                    }
+                    feedArray.some(function (feed, key) {
+                        var xmlFeedDate = (new Date(xmlFeed.published)).getTime();
+                        var feedDate = (new Date(feed.creation_date * 1000)).getTime();
+                        if (feed.timeline_type !== 'badge' && (xmlFeed.title.content.indexOf(feed.title) !== -1) && xmlFeedDate === feedDate) {
+                            $('#feedId' + key).append(xmlFeed.summary.content);
+                            return true;
+                        }
+                    });
                 });
-            });
             }
+            formatCode();
         });
 
         // Display Badge details
@@ -83,4 +84,19 @@ $('#stackTab').click(function () {
 
 function loadMoreStackFeed() {
 
+}
+
+function formatCode() {
+    $("pre code").each(function (index, code) {
+        // Format comments - ignore spaces between // and comments
+        var stripCommentSpaces = code.textContent.replace(/\/\/\s+/g, '//');
+        // Add line break - replace 4 space with new line
+        var addNewLine = stripCommentSpaces.replace(/\s{4}/g, '<br>');
+        // Add tab spaces - add 4 spaces for all the line break but the first
+        var addCodeTabs = addNewLine.replace(/<br><br>/g, '<br>    ').replace(/\s{4}<br>/g, '    ');
+        // support html tags
+        var htmlContent = addCodeTabs.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br>');
+        // replace the code with the formatted code
+        code.innerHTML = htmlContent;
+    });
 }

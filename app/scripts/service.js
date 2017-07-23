@@ -1,11 +1,11 @@
 'use strict';
 
 var monthNames = [
-                'Jan', 'Feb', 'Mar',
-                'Aprl', 'May', 'Jun', 'Jul',
-                'Aug', 'Sep', 'Oct',
-                'Nov', 'Dec'
-            ];
+    'Jan', 'Feb', 'Mar',
+    'Aprl', 'May', 'Jun', 'Jul',
+    'Aug', 'Sep', 'Oct',
+    'Nov', 'Dec'
+];
 
 function formatDate(date) {
     date = new Date(date);
@@ -20,7 +20,7 @@ function formatDate(date) {
 function isScrollBottom() {
     var documentHeight = $(document).height();
     var scrollPosition = $(window).height() + $(window).scrollTop();
-    return (documentHeight === scrollPosition);
+    return (documentHeight * 0.9 < scrollPosition);
 }
 
 function loadMoreFeed() {

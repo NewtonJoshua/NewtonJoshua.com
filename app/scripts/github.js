@@ -17,7 +17,7 @@ function formatGitContent(content) {
 }
 
 function gitHubFeeds() {
-    $.get('https://newton-angelin.appspot.com/feed?url=https://github.com/NewtonJoshua.atom', function(result){
+    $.get('https://newtonjoshua-com.appspot.com/feed?url=https://github.com/NewtonJoshua.atom', function(result){
         if (!result.error) {
             result.feed.entry.forEach(function (feed) {
                 var elem = '<li class="media list-group-item p-a">' +

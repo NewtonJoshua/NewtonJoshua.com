@@ -40,7 +40,7 @@ window.fbAsyncInit = function () {
 $(window).scroll(function () {
     var documentHeight = $(document).height();
     var scrollPosition = $(window).height() + $(window).scrollTop();
-    if (documentHeight === scrollPosition && fbPaging !== '') {
+    if (documentHeight * 0.9 < scrollPosition && fbPaging !== '') {
         $.get(fbPaging, function (photos) {
             photos.data.forEach(function (photo) {
                 var pic = photo.images[0];
